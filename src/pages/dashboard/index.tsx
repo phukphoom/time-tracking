@@ -1,6 +1,11 @@
+import { GetServerSideProps } from "next";
 import { NavBar, PageFrame } from "../../components";
 
-const DashboardPage = ({ role }) => {
+interface DashboardPageProps {
+  role: string;
+}
+
+const DashboardPage = ({ role }: DashboardPageProps) => {
   return (
     <>
       <NavBar role={role} />
@@ -10,18 +15,20 @@ const DashboardPage = ({ role }) => {
 };
 export default DashboardPage;
 
-export const getServerSideProps = async ({ req, res }) => {
+export const getServerSideProps: GetServerSideProps<
+  DashboardPageProps
+> = async ({ req, res }) => {
   let response;
 
   response = await fetch("http://localhost:3000/api/v1/getSession", {
     method: "POST",
-    headers: req.headers,
+    headers: req.headers as HeadersInit,
   });
   if (response.redirected) {
     res.writeHead(302, { Location: response.url });
     res.end();
     return {
-      props: {},
+      props: {} as DashboardPageProps,
     };
   }
   const session = await response.json();
@@ -29,7 +36,7 @@ export const getServerSideProps = async ({ req, res }) => {
     res.writeHead(302, { Location: "/" });
     res.end();
     return {
-      props: {},
+      props: {} as DashboardPageProps,
     };
   }
 
