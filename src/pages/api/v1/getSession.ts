@@ -1,5 +1,5 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { authentication } from "../middlewares";
+import { authentication } from "@/middleware"
 import { Session } from "../../../types";
 
 const getSessionApi = async (

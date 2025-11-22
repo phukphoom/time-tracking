@@ -1,9 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { hash } from "bcrypt";
 
-import { openDatabase } from "../../utils/openDatabase";
-import { hashSalt } from "../../utils/config";
-import { authentication } from "../../middlewares";
+import { openDatabase } from "@/lib/db"
+import { hashSalt } from "@/lib/config"
+import { authentication } from "@/middleware"
 import { Session } from "../../../../types";
 
 interface CreateAccountRequestBody {

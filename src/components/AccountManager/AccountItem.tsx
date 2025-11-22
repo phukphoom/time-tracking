@@ -88,28 +88,28 @@ const AccountItem = ({
   return (
     <div className="flex flex-row items-center w-full h-10 bg-white">
       <div
-        className={`flex w-1/12 justify-center m-2 py-1 justify-center rounded ${
+        className={`flex w-1/12 justify-center m-2 py-1 rounded ${
           role == "admin" || role == "manager" ? "bg-gray-400" : "bg-gray-200"
         }`}
       >
         {id}
       </div>
       <div
-        className={`flex w-3/12 justify-center m-2 py-1 justify-center rounded ${
+        className={`flex w-3/12 justify-center m-2 py-1 rounded ${
           role == "admin" || role == "manager" ? "bg-gray-400" : "bg-gray-200"
         }`}
       >
         {name}
       </div>
       <div
-        className={`flex w-3/12 justify-center m-2 py-1 justify-center rounded ${
+        className={`flex w-3/12 justify-center m-2 py-1 rounded ${
           role == "admin" || role == "manager" ? "bg-gray-400" : "bg-gray-200"
         }`}
       >
         {role}
       </div>
       <div
-        className={`flex w-3/12 justify-center m-2 py-1 justify-center rounded ${
+        className={`flex w-3/12 justify-center m-2 py-1 rounded ${
           role == "admin" || role == "manager" ? "bg-gray-400" : "bg-gray-200"
         }`}
       >

@@ -1,6 +1,6 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import { openDatabase } from "../../../utils/openDatabase";
-import { authentication } from "../../../middlewares";
+import { openDatabase } from "@/lib/db"
+import { authentication } from "@/middleware"
 import { Session } from "../../../../../types";
 
 interface ClockOutRequestBody {

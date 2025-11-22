@@ -1,8 +1,8 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { verify } from "jsonwebtoken";
-import { Session } from "../../../types";
+import { Session } from "@/types";
 
-import { jwtSecret } from "../utils/config";
+import { jwtSecret } from "@/lib/config";
 
 type AuthenticatedHandler = (
   req: NextApiRequest,

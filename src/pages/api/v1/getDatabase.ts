@@ -1,5 +1,5 @@
-import { openDatabase } from '../utils/openDatabase';
-import { authentication } from '../middlewares';
+import { openDatabase } from "@/lib/db"
+import { authentication } from "@/middleware"
 
 const getDatabaseApi = async (req, res, session) => {
     if (req.method === 'GET') {

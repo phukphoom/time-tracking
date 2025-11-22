@@ -3,8 +3,8 @@ import { compare } from "bcrypt";
 import { sign } from "jsonwebtoken";
 import cookie from "cookie";
 
-import { openDatabase } from "../utils/openDatabase";
-import { jwtSecret } from "../utils/config";
+import { openDatabase } from "@/lib/db"
+import { jwtSecret } from "@/lib/config"
 import { Account } from "../../../types";
 
 interface LoginRequestBody {
