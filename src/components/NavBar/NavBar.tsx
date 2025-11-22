@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { MouseEvent } from "react";
 import Swal from "sweetalert2";
 
-const NavBar = ({ role }) => {
+interface NavBarProps {
+  role: string;
+}
+
+const NavBar = ({ role }: NavBarProps) => {
   const router = useRouter();
 
-  const logoutHandler = async (event) => {
+  const logoutHandler = async (event: MouseEvent<HTMLButtonElement>) => {
     event.preventDefault();
 
     Swal.fire({
